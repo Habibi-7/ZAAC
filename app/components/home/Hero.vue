@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next'
-import { GitHubIcon, XIcon } from 'vue3-simple-icons'
-import heroUrl from '@/assets/images/hero.svg?url'
 
-const { title, description, github, twitter } = useAppConfig()
+const { title, description } = useAppConfig()
+const heroUrl = '/images/hero.svg'
 </script>
 
 <template>
@@ -26,12 +25,9 @@ const { title, description, github, twitter } = useAppConfig()
             lg:text-left
           "
         >
-          <!-- Twitter Follow Badge -->
           <a
-            :href="twitter"
-            target="_blank"
-            rel="noopener"
-            :title="$t('home.twitter.follow')"
+            href="#programs"
+            :title="$t('home.hero.badge')"
             class="
               mx-auto mb-8 inline-flex w-fit items-center gap-2 rounded-full
               border p-1 pr-3
@@ -44,9 +40,9 @@ const { title, description, github, twitter } = useAppConfig()
                 text-xs
               "
             >
-              <XIcon aria-hidden="true" class="size-3" />
+              ZAAC
             </span>
-            <span class="text-sm">{{ $t('home.twitter.follow') }}</span>
+            <span class="text-sm">{{ $t('home.hero.badge') }}</span>
             <span class="block h-4 w-px bg-border" />
             <ArrowRight aria-hidden="true" class="size-4" />
           </a>
@@ -76,9 +72,9 @@ const { title, description, github, twitter } = useAppConfig()
               size="lg"
               class="px-5 text-base"
             >
-              <NuxtLink to="/dashboard">
-                <span class="text-nowrap">{{ $t('dashboard.title') }}</span>
-              </NuxtLink>
+              <a href="#programs">
+                <span class="text-nowrap">{{ $t('home.hero.primary_action') }}</span>
+              </a>
             </Button>
             <Button
               as-child
@@ -86,14 +82,8 @@ const { title, description, github, twitter } = useAppConfig()
               variant="ghost"
               class="px-5 text-base"
             >
-              <a
-                :href="github"
-                target="_blank"
-                :title="$t('layouts.footer.social.github')"
-                class="flex items-center gap-1.5"
-              >
-                <GitHubIcon aria-hidden="true" class="size-5" />
-                <span class="text-nowrap">{{ $t('home.hero.github_repo') }}</span>
+              <a href="#contact" :title="$t('home.hero.secondary_action')">
+                <span class="text-nowrap">{{ $t('home.hero.secondary_action') }}</span>
               </a>
             </Button>
           </div>
@@ -107,7 +97,7 @@ const { title, description, github, twitter } = useAppConfig()
             md:block
             lg:w-[420px]
           "
-          aria-label="Link sharing illustration"
+          aria-label="Mathematics education illustration"
           suppressHydrationWarning
         />
       </div>

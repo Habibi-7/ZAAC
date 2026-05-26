@@ -1,22 +1,16 @@
-import type { NitroFetchOptions, NitroFetchRequest } from 'nitropack'
+import type { MockAPIOptions } from './mock-api'
 import { navigateTo } from '#imports'
-import { defu } from 'defu'
 import { useAuthToken } from '@/composables/useAuthToken'
+import { handleMockAPI } from './mock-api'
 
-type APIOptions = Omit<NitroFetchOptions<NitroFetchRequest>, 'headers'> & {
+type APIOptions = MockAPIOptions & {
   headers?: Record<string, string>
 }
 
 export function useAPI<T = unknown>(api: string, options?: APIOptions): Promise<T> {
-  const { getToken, removeToken } = useAuthToken()
+  const { removeToken } = useAuthToken()
 
-  const mergedOptions = defu(options || {}, {
-    headers: {
-      Authorization: `Bearer ${getToken() || ''}`,
-    },
-  }) as NitroFetchOptions<NitroFetchRequest>
-
-  return $fetch<T>(api, mergedOptions).catch((error) => {
+  return handleMockAPI<T>(api, options).catch((error) => {
     if (error?.status === 401) {
       removeToken()
       navigateTo('/dashboard/login')

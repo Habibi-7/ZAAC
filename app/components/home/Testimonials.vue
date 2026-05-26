@@ -4,9 +4,9 @@ import testimonials from '@/data/testimonials.json'
 interface Testimonial {
   id: string
   name: string
-  username: string
+  username?: string
   content: string
-  url: string
+  url?: string
   verified: boolean
   date: string
 }
@@ -37,12 +37,13 @@ const typedTestimonials = testimonials as Testimonial[]
             md:mt-12 md:columns-3
           "
         >
-          <a
+          <component
+            :is="testimonial.url ? 'a' : 'article'"
             v-for="testimonial in typedTestimonials"
             :key="testimonial.id"
-            :href="testimonial.url"
-            target="_blank"
-            rel="noopener noreferrer"
+            :href="testimonial.url || undefined"
+            :target="testimonial.url ? '_blank' : undefined"
+            :rel="testimonial.url ? 'noopener noreferrer' : undefined"
             class="block break-inside-avoid"
           >
             <Card
@@ -54,6 +55,7 @@ const typedTestimonials = testimonials as Testimonial[]
               <CardContent class="grid grid-cols-[auto_1fr] gap-3 px-4 py-0">
                 <Avatar class="size-9">
                   <AvatarImage
+                    v-if="testimonial.username"
                     :alt="testimonial.name"
                     :src="`https://unavatar.webp.se/x/${testimonial.username}`"
                     loading="lazy"
@@ -78,6 +80,7 @@ const typedTestimonials = testimonials as Testimonial[]
                   </div>
 
                   <span
+                    v-if="testimonial.username"
                     class="block text-sm tracking-wide text-muted-foreground"
                   >
                     @{{ testimonial.username }}
@@ -91,7 +94,7 @@ const typedTestimonials = testimonials as Testimonial[]
                 </div>
               </CardContent>
             </Card>
-          </a>
+          </component>
         </div>
       </div>
     </div>

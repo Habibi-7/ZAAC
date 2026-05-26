@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-const listQueryLimit = +useRuntimeConfig().listQueryLimit
+const listQueryLimit = 500
 
 export const QuerySchema = z.object({
   id: z.string().optional(),

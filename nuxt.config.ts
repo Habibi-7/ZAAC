@@ -1,4 +1,3 @@
-import process from 'node:process'
 import tailwindcss from '@tailwindcss/vite'
 import { currentLocales } from './i18n/i18n'
 
@@ -19,23 +18,6 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   runtimeConfig: {
-    siteToken: process.env.NUXT_SITE_TOKEN || crypto.randomUUID(),
-    redirectStatusCode: '301',
-    linkCacheTtl: 60,
-    redirectWithQuery: false,
-    homeURL: '',
-    cfAccountId: '',
-    cfApiToken: '',
-    dataset: 'sink',
-    aiModel: '@cf/qwen/qwen3-30b-a3b-fp8',
-    aiPrompt: `You are a URL shortening assistant, please shorten the URL provided by the user into a SLUG. The SLUG information should be derived from the URL and page content (if provided). Do not make any assumptions beyond the given information. A SLUG is human-readable and should not exceed three words and can be validated using regular expressions {slugRegex} . Only the best one is returned, the format must be JSON reference {"slug": "example-slug"}`,
-    aiOgPrompt: `You are an OpenGraph metadata assistant. Please summarize the page content provided by the user into a perfect title and description for an OpenGraph preview. Do not make any assumptions beyond the given information. Only the best one is returned, the format must be JSON reference {"title": "Example Title", "description": "Example description that summarizes the page accurately."}`,
-    caseSensitive: false,
-    listQueryLimit: 500,
-    disableBotAccessLog: false,
-    disableAutoBackup: false,
-    notFoundRedirect: '',
-    safeBrowsingDoh: '', // Set to DoH URL to enable auto-detection, e.g. https://family.cloudflare-dns.com/dns-query
     public: {
       previewMode: '',
       slugDefaultLength: '6',
@@ -45,9 +27,6 @@ export default defineNuxtConfig({
   routeRules: {
     '/': {
       prerender: true,
-    },
-    '/api/**': {
-      cors: process.env.NUXT_API_CORS === 'true',
     },
     '/sphere.bin': {
       headers: { 'Cache-Control': 'public, max-age=2592000, immutable' },
@@ -71,27 +50,7 @@ export default defineNuxtConfig({
   },
   compatibilityDate: 'latest',
   nitro: {
-    preset: !import.meta.env.CI ? 'cloudflare-module' : undefined,
-    experimental: {
-      openAPI: true,
-    },
-    timing: true,
-    openAPI: {
-      production: 'runtime',
-      meta: {
-        title: 'Sink API',
-        description: 'A Simple / Speedy / Secure Link Shortener with Analytics, 100% run on Cloudflare.',
-      },
-      route: '/_docs/openapi.json',
-      ui: {
-        scalar: {
-          route: '/_docs/scalar',
-        },
-        swagger: {
-          route: '/_docs/swagger',
-        },
-      },
-    },
+    preset: 'static',
   },
   vite: {
     plugins: [

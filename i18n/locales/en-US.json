@@ -70,7 +70,9 @@
   },
   "home": {
     "hero": {
-      "github_repo": "GitHub Repo"
+      "badge": "English, science, math, and computer classes",
+      "primary_action": "Browse Classes",
+      "secondary_action": "Contact"
     },
     "features": {
       "title": "Features",
@@ -125,25 +127,25 @@
       }
     },
     "cta": {
-      "title": "Deployment immediately",
-      "description": "With just a few simple clicks, you can start deploying without any expenses",
-      "button": "Start Deploy"
+      "title": "Start learning with ZAAC",
+      "description": "Visit Zahoor Afkaar Academic Center in Kabul to learn more about class schedules and registration.",
+      "button": "View Classes"
     },
     "logos": {
-      "title": "Built with awesome technologies"
+      "title": "Built for focused learning"
     },
     "twitter": {
-      "follow": "Follow on X(Twitter)"
+      "follow": "Study at ZAAC"
     },
     "stats": {
-      "title": "Sink in Numbers",
-      "subtitle": "Trusted by developers around the world",
-      "stars": "Stars on GitHub",
-      "forks": "Forks"
+      "title": "Learning at ZAAC",
+      "subtitle": "Simple programs for English, sciences, and computer skills",
+      "stars": "Core classes",
+      "forks": "Program areas"
     },
     "testimonials": {
-      "title": "Loved by Users",
-      "subtitle": "See what developers are saying about Sink"
+      "title": "Loved by Students",
+      "subtitle": "A few words from students in Kabul"
     }
   },
   "dashboard": {

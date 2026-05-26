@@ -1,7 +1,16 @@
 <script setup lang="ts">
 import NumberFlow from '@number-flow/vue'
 
-const { rawStats } = useGithubStats()
+const stats = [
+  {
+    value: 8,
+    label: 'Core classes',
+  },
+  {
+    value: 3,
+    label: 'Program areas',
+  },
+] as const
 </script>
 
 <template>
@@ -35,6 +44,8 @@ const { rawStats } = useGithubStats()
         "
       >
         <div
+          v-for="item in stats"
+          :key="item.label"
           class="
             space-y-4 pb-6 text-center
             md:pb-0
@@ -44,26 +55,10 @@ const { rawStats } = useGithubStats()
             <template #fallback>
               <Skeleton class="mx-auto h-12 w-24" />
             </template>
-            <NumberFlow class="text-5xl font-bold tabular-nums" :value="rawStats.stars" />
+            <NumberFlow class="text-5xl font-bold tabular-nums" :value="item.value" />
           </ClientOnly>
           <p class="text-muted-foreground">
-            {{ $t('home.stats.stars') }}
-          </p>
-        </div>
-        <div
-          class="
-            space-y-4 pt-6 text-center
-            md:pt-0
-          "
-        >
-          <ClientOnly>
-            <template #fallback>
-              <Skeleton class="mx-auto h-12 w-24" />
-            </template>
-            <NumberFlow class="text-5xl font-bold tabular-nums" :value="rawStats.forks" />
-          </ClientOnly>
-          <p class="text-muted-foreground">
-            {{ $t('home.stats.forks') }}
+            {{ item.label }}
           </p>
         </div>
       </div>

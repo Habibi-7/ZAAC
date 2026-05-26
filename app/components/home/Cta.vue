@@ -1,9 +1,5 @@
-<script setup lang="ts">
-const { github } = useAppConfig()
-</script>
-
 <template>
-  <section class="py-16">
+  <section id="contact" class="py-16">
     <div class="mx-auto max-w-6xl px-6">
       <div
         class="
@@ -26,24 +22,19 @@ const { github } = useAppConfig()
               as-child
               size="lg"
             >
-              <a
-                :href="`${github}?tab=readme-ov-file#%EF%B8%8F-deployment`"
-                target="_blank"
-                :title="$t('home.cta.button')"
-              >
+              <a href="#programs" :title="$t('home.cta.button')">
                 {{ $t('home.cta.button') }}
               </a>
             </Button>
 
-            <Button
-              as-child
-              size="lg"
-              variant="outline"
+            <div
+              class="
+                inline-flex items-center rounded-md border px-4 py-2 text-sm
+                text-muted-foreground
+              "
             >
-              <NuxtLink to="/dashboard" :title="$t('dashboard.title')">
-                {{ $t('dashboard.title') }}
-              </NuxtLink>
-            </Button>
+              Kabul, Afghanistan
+            </div>
           </div>
         </div>
       </div>

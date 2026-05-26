@@ -1,73 +1,53 @@
 <script setup lang="ts">
-import { AreaChart, FileJson, Globe, Hourglass, Languages, Link, Paintbrush, QrCode, ServerOff, Share2, Smartphone, Sparkles } from 'lucide-vue-next'
+import { Atom, Beaker, BookOpen, Calculator, Dna, GraduationCap, Monitor, NotebookPen } from 'lucide-vue-next'
 
-const { t } = useI18n()
-const features = computed(() => [
+const classes = [
   {
-    title: t('home.features.url_shortening.title'),
-    description: t('home.features.url_shortening.description'),
-    icon: Link,
+    title: 'English Language',
+    description: 'Reading, writing, speaking, and grammar for students building strong English skills.',
+    icon: BookOpen,
   },
   {
-    title: t('home.features.analytics.title'),
-    description: t('home.features.analytics.description'),
-    icon: AreaChart,
+    title: 'Mathematics',
+    description: 'Clear, practical math classes from fundamentals to advanced school topics.',
+    icon: Calculator,
   },
   {
-    title: t('home.features.serverless.title'),
-    description: t('home.features.serverless.description'),
-    icon: ServerOff,
+    title: 'Physics',
+    description: 'Core physics lessons with clear explanations, examples, and problem solving.',
+    icon: Atom,
   },
   {
-    title: t('home.features.customizable_slug.title'),
-    description: t('home.features.customizable_slug.description'),
-    icon: Paintbrush,
+    title: 'Chemistry',
+    description: 'Practical chemistry support for formulas, reactions, and school coursework.',
+    icon: Beaker,
   },
   {
-    title: t('home.features.ai_slug.title'),
-    description: t('home.features.ai_slug.description'),
-    icon: Sparkles,
+    title: 'Biology',
+    description: 'Biology classes that make living systems, diagrams, and concepts easier to understand.',
+    icon: Dna,
   },
   {
-    title: t('home.features.link_expiration.title'),
-    description: t('home.features.link_expiration.description'),
-    icon: Hourglass,
+    title: 'Computer Skills',
+    description: 'Computer basics and practical digital skills for school and future work.',
+    icon: Monitor,
   },
   {
-    title: t('home.features.device_routing.title'),
-    description: t('home.features.device_routing.description'),
-    icon: Smartphone,
+    title: 'Exam Preparation',
+    description: 'Focused review sessions to help students prepare with more confidence.',
+    icon: GraduationCap,
   },
   {
-    title: t('home.features.og_preview.title'),
-    description: t('home.features.og_preview.description'),
-    icon: Share2,
+    title: 'School Support',
+    description: 'Extra help for homework, assignments, and difficult school lessons.',
+    icon: NotebookPen,
   },
-  {
-    title: t('home.features.realtime_analytics.title'),
-    description: t('home.features.realtime_analytics.description'),
-    icon: Globe,
-  },
-  {
-    title: t('home.features.qr_code.title'),
-    description: t('home.features.qr_code.description'),
-    icon: QrCode,
-  },
-  {
-    title: t('home.features.import_export.title'),
-    description: t('home.features.import_export.description'),
-    icon: FileJson,
-  },
-  {
-    title: t('home.features.multi_language.title'),
-    description: t('home.features.multi_language.description'),
-    icon: Languages,
-  },
-])
+] as const
 </script>
 
 <template>
   <section
+    id="programs"
     class="
       py-12
       md:py-20
@@ -85,10 +65,10 @@ const features = computed(() => [
         <h2
           class="text-3xl font-semibold text-balance"
         >
-          {{ $t('home.features.title') }}
+          Classes
         </h2>
         <p class="text-muted-foreground">
-          {{ $t('home.features.subtitle') }}
+          Focused programs for students in Kabul.
         </p>
       </div>
 
@@ -96,11 +76,11 @@ const features = computed(() => [
         class="
           relative mx-auto grid gap-3
           sm:grid-cols-2
-          lg:grid-cols-3
+          lg:grid-cols-4
         "
       >
         <div
-          v-for="item in features"
+          v-for="item in classes"
           :key="item.title"
           class="space-y-3 rounded-xl border p-6"
         >

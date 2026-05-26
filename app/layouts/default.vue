@@ -1,11 +1,8 @@
 <script setup lang="ts">
-import NumberFlow from '@number-flow/vue'
-import { Menu, Star, X } from 'lucide-vue-next'
-import { GitHubIcon, TelegramIcon, XIcon } from 'vue3-simple-icons'
+import { MapPin, Menu, X } from 'lucide-vue-next'
 
 const showMenu = ref(false)
-const { title, telegram, twitter, github } = useAppConfig()
-const { rawStats } = useGithubStats()
+const { title } = useAppConfig()
 </script>
 
 <template>
@@ -36,13 +33,12 @@ const { rawStats } = useGithubStats()
                 class="flex items-center space-x-2"
               >
                 <span
-                  class="flex size-8 items-center justify-center rounded-full"
+                  class="
+                    flex size-8 items-center justify-center rounded-full
+                    bg-primary text-xs font-black text-primary-foreground
+                  "
                 >
-                  <img
-                    src="/sink.png"
-                    :alt="`${title} Logo`"
-                    class="size-full rounded-full"
-                  >
+                  Z
                 </span>
                 <span class="text-xl font-black">{{ title }}</span>
               </NuxtLink>
@@ -98,16 +94,13 @@ const { rawStats } = useGithubStats()
                   variant="outline"
                   size="sm"
                 >
-                  <a
-                    :href="github"
-                    target="_blank"
-                    :title="$t('layouts.footer.social.github')"
-                    class="flex items-center gap-1.5"
-                  >
-                    <GitHubIcon class="size-4" />
-                    <Star class="size-3" />
-                    <NumberFlow class="tabular-nums" :value="rawStats.stars" />
-                  </a>
+                  <a href="#programs">Programs</a>
+                </Button>
+                <Button
+                  as-child
+                  size="sm"
+                >
+                  <a href="#contact">Contact</a>
                 </Button>
 
                 <SwitchLanguage />
@@ -147,13 +140,12 @@ const { rawStats } = useGithubStats()
             >
               <div class="flex items-center space-x-2">
                 <span
-                  class="flex size-8 items-center justify-center rounded-full"
+                  class="
+                    flex size-8 items-center justify-center rounded-full
+                    bg-primary text-xs font-black text-primary-foreground
+                  "
                 >
-                  <img
-                    src="/sink.png"
-                    :alt="`${title} Logo`"
-                    class="size-full rounded-full"
-                  >
+                  Z
                 </span>
                 <span class="text-xl font-black">{{ title }}</span>
               </div>
@@ -161,60 +153,18 @@ const { rawStats } = useGithubStats()
 
             <small class="block text-center text-sm text-muted-foreground">
               &copy; {{ new Date().getFullYear() }}
-              <a
-                href="https://html.zone"
-                target="_blank"
-                title="HTML.ZONE"
-                class="hover:text-primary"
-              >
-                {{ $t('layouts.footer.copyright') }}
-              </a>
+              Zahoor Afkaar Academic Center
             </small>
           </div>
 
-          <div class="flex justify-center gap-6 text-sm">
-            <a
-              v-if="twitter"
-              :href="twitter"
-              target="_blank"
-              rel="noopener noreferrer"
-              :title="$t('layouts.footer.social.twitter')"
-              aria-label="Twitter"
-              class="
-                block text-muted-foreground
-                hover:text-primary
-              "
-            >
-              <XIcon class="size-6" />
-            </a>
-            <a
-              v-if="telegram"
-              :href="telegram"
-              target="_blank"
-              rel="noopener noreferrer"
-              :title="$t('layouts.footer.social.telegram')"
-              aria-label="Telegram"
-              class="
-                block text-muted-foreground
-                hover:text-primary
-              "
-            >
-              <TelegramIcon class="size-6" />
-            </a>
-            <a
-              v-if="github"
-              :href="github"
-              target="_blank"
-              rel="noopener noreferrer"
-              :title="$t('layouts.footer.social.github')"
-              aria-label="GitHub"
-              class="
-                block text-muted-foreground
-                hover:text-primary
-              "
-            >
-              <GitHubIcon class="size-6" />
-            </a>
+          <div
+            class="
+              flex items-center justify-center gap-2 text-sm
+              text-muted-foreground
+            "
+          >
+            <MapPin class="size-4" />
+            <span>Kabul, Afghanistan</span>
           </div>
         </div>
       </div>

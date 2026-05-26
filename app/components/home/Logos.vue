@@ -3,34 +3,34 @@
     <div class="mx-auto max-w-6xl px-6">
       <div
         class="
-          flex items-center justify-center gap-x-12 gap-y-6
-          md:gap-x-24
+          grid gap-3
+          md:grid-cols-3
         "
       >
-        <img
-          class="
-            h-20 w-auto
-            md:h-32
-            lg:h-44
-          "
-          alt="Cloudflare"
-          src="@/assets/images/cloudflare.png"
-          fetchpriority="high"
-          width="350"
-          height="176"
-        >
-        <img
-          class="
-            h-20 w-auto
-            md:h-32
-            lg:h-44
-          "
-          alt="Nuxt.js"
-          src="@/assets/images/nuxtjs.png"
-          fetchpriority="high"
-          width="350"
-          height="176"
-        >
+        <div class="rounded-xl border p-5">
+          <p class="text-sm font-medium">
+            Kabul Based
+          </p>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Serving students locally in Kabul, Afghanistan.
+          </p>
+        </div>
+        <div class="rounded-xl border p-5">
+          <p class="text-sm font-medium">
+            Simple Classes
+          </p>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Clear lessons in English, science, math, and computers.
+          </p>
+        </div>
+        <div class="rounded-xl border p-5">
+          <p class="text-sm font-medium">
+            Supportive Teachers
+          </p>
+          <p class="mt-2 text-sm text-muted-foreground">
+            Patient instruction for school students and young learners.
+          </p>
+        </div>
       </div>
     </div>
   </section>
