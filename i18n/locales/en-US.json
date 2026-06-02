@@ -36,7 +36,10 @@
   },
   "layouts": {
     "footer": {
-      "copyright": "Products of HTML.ZONE",
+      "copyright": "Zahoor Afkaar Academic Center",
+      "location": "Kabul, Afghanistan",
+      "created_by": "Created by",
+      "creator": "Zahoor Afkaar Academic Center",
       "social": {
         "email": "Email",
         "telegram": "Telegram",
@@ -47,6 +50,9 @@
       }
     },
     "header": {
+      "home": "ZAAC home",
+      "programs": "Programs",
+      "contact": "Contact",
       "select_language": "Select Language"
     }
   },
@@ -70,9 +76,49 @@
   },
   "home": {
     "hero": {
+      "title": "Zahoor Afkaar Academic Center",
+      "description": "Zahoor Afkaar Academic Center teaches English, natural sciences, and computer skills in Kabul, Afghanistan.",
       "badge": "English, science, math, and computer classes",
       "primary_action": "Browse Classes",
       "secondary_action": "Contact"
+    },
+    "classes": {
+      "title": "Classes",
+      "subtitle": "Focused programs for students in Kabul.",
+      "items": {
+        "english": {
+          "title": "English Language",
+          "description": "Reading, writing, speaking, and grammar for students building strong English skills."
+        },
+        "mathematics": {
+          "title": "Mathematics",
+          "description": "Clear, practical math classes from fundamentals to advanced school topics."
+        },
+        "physics": {
+          "title": "Physics",
+          "description": "Core physics lessons with clear explanations, examples, and problem solving."
+        },
+        "chemistry": {
+          "title": "Chemistry",
+          "description": "Practical chemistry support for formulas, reactions, and school coursework."
+        },
+        "biology": {
+          "title": "Biology",
+          "description": "Biology classes that make living systems, diagrams, and concepts easier to understand."
+        },
+        "computer": {
+          "title": "Computer Skills",
+          "description": "Computer basics and practical digital skills for school and future work."
+        },
+        "exam": {
+          "title": "Exam Preparation",
+          "description": "Focused review sessions to help students prepare with more confidence."
+        },
+        "support": {
+          "title": "School Support",
+          "description": "Extra help for homework, assignments, and difficult school lessons."
+        }
+      }
     },
     "features": {
       "title": "Features",
@@ -129,10 +175,37 @@
     "cta": {
       "title": "Start learning with ZAAC",
       "description": "Visit Zahoor Afkaar Academic Center in Kabul to learn more about class schedules and registration.",
-      "button": "View Classes"
+      "button": "View Classes",
+      "location": "Kabul, Afghanistan"
     },
     "logos": {
-      "title": "Built for focused learning"
+      "title": "Built for focused learning",
+      "items": {
+        "local": {
+          "title": "Kabul Based",
+          "description": "Serving students locally in Kabul, Afghanistan."
+        },
+        "simple": {
+          "title": "Simple Classes",
+          "description": "Clear lessons in English, science, math, and computers."
+        },
+        "supportive": {
+          "title": "Supportive Teachers",
+          "description": "Patient instruction for school students and young learners."
+        }
+      }
+    },
+    "image_slider": {
+      "title": "Inside the classroom",
+      "subtitle": "A learning environment shaped by teachers, students, and achievement.",
+      "slides": {
+        "certificate": "ZAAC teacher presenting a certificate to a student",
+        "ceremony": "ZAAC graduation ceremony with teachers and students",
+        "computer": "ZAAC students studying computer skills",
+        "graduation": "ZAAC students receiving graduation certificates",
+        "female_students": "ZAAC female students holding graduation certificates",
+        "speaker": "ZAAC speaker addressing students at an academic event"
+      }
     },
     "twitter": {
       "follow": "Study at ZAAC"
@@ -141,11 +214,39 @@
       "title": "Learning at ZAAC",
       "subtitle": "Simple programs for English, sciences, and computer skills",
       "stars": "Core classes",
-      "forks": "Program areas"
+      "forks": "Program areas",
+      "core_classes": "Core classes",
+      "program_areas": "Program areas"
     },
     "testimonials": {
       "title": "Loved by Students",
-      "subtitle": "A few words from students in Kabul"
+      "subtitle": "A few words from students in Kabul",
+      "items": {
+        "zaac-001": {
+          "name": "Ahmad, Grade 11",
+          "content": "ZAAC helped me become more confident in English. The teachers explain slowly, give examples, and make every student feel comfortable asking questions."
+        },
+        "zaac-002": {
+          "name": "Fatima, Kabul",
+          "content": "I joined for mathematics and physics, and the classes made difficult topics much easier. The lessons are clear and the environment is respectful."
+        },
+        "zaac-003": {
+          "name": "Maryam, English Student",
+          "content": "My speaking improved a lot after studying at Zahoor Afkaar Academic Center. I like that the classes are simple, organized, and practical."
+        },
+        "zaac-004": {
+          "name": "Omid, Computer Class",
+          "content": "The computer classes helped me learn useful skills step by step. The teachers are patient and explain things in a way students can understand."
+        },
+        "zaac-005": {
+          "name": "Zahra, Science Student",
+          "content": "ZAAC is a good place for students who want to improve in school subjects. Chemistry and biology became much clearer for me here."
+        },
+        "zaac-006": {
+          "name": "Haroon, Kabul",
+          "content": "The center has a calm learning environment. I feel motivated to study English, science, and computer skills for my future."
+        }
+      }
     }
   },
   "dashboard": {

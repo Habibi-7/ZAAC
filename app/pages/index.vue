@@ -4,6 +4,7 @@
     <HomeLogos />
     <HomeFeatures />
     <HomeStats />
+    <HomeImageSlider />
     <HomeTestimonials />
     <HomeCta />
   </div>

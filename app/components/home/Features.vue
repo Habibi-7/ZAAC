@@ -3,43 +3,35 @@ import { Atom, Beaker, BookOpen, Calculator, Dna, GraduationCap, Monitor, Notebo
 
 const classes = [
   {
-    title: 'English Language',
-    description: 'Reading, writing, speaking, and grammar for students building strong English skills.',
+    id: 'english',
     icon: BookOpen,
   },
   {
-    title: 'Mathematics',
-    description: 'Clear, practical math classes from fundamentals to advanced school topics.',
+    id: 'mathematics',
     icon: Calculator,
   },
   {
-    title: 'Physics',
-    description: 'Core physics lessons with clear explanations, examples, and problem solving.',
+    id: 'physics',
     icon: Atom,
   },
   {
-    title: 'Chemistry',
-    description: 'Practical chemistry support for formulas, reactions, and school coursework.',
+    id: 'chemistry',
     icon: Beaker,
   },
   {
-    title: 'Biology',
-    description: 'Biology classes that make living systems, diagrams, and concepts easier to understand.',
+    id: 'biology',
     icon: Dna,
   },
   {
-    title: 'Computer Skills',
-    description: 'Computer basics and practical digital skills for school and future work.',
+    id: 'computer',
     icon: Monitor,
   },
   {
-    title: 'Exam Preparation',
-    description: 'Focused review sessions to help students prepare with more confidence.',
+    id: 'exam',
     icon: GraduationCap,
   },
   {
-    title: 'School Support',
-    description: 'Extra help for homework, assignments, and difficult school lessons.',
+    id: 'support',
     icon: NotebookPen,
   },
 ] as const
@@ -65,10 +57,10 @@ const classes = [
         <h2
           class="text-3xl font-semibold text-balance"
         >
-          Classes
+          {{ $t('home.classes.title') }}
         </h2>
         <p class="text-muted-foreground">
-          Focused programs for students in Kabul.
+          {{ $t('home.classes.subtitle') }}
         </p>
       </div>
 
@@ -81,7 +73,7 @@ const classes = [
       >
         <div
           v-for="item in classes"
-          :key="item.title"
+          :key="item.id"
           class="space-y-3 rounded-xl border p-6"
         >
           <div class="flex items-center gap-2">
@@ -90,11 +82,11 @@ const classes = [
               class="size-4"
             />
             <h3 class="text-sm font-medium">
-              {{ item.title }}
+              {{ $t(`home.classes.items.${item.id}.title`) }}
             </h3>
           </div>
           <p class="text-sm text-muted-foreground">
-            {{ item.description }}
+            {{ $t(`home.classes.items.${item.id}.description`) }}
           </p>
         </div>
       </div>

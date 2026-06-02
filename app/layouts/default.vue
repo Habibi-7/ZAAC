@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { MapPin, Menu, X } from 'lucide-vue-next'
+import { Menu, X } from 'lucide-vue-next'
+import logoUrl from '@/assets/images/logo.jpeg'
 
 const showMenu = ref(false)
 const { title } = useAppConfig()
@@ -29,18 +30,19 @@ const { title } = useAppConfig()
               <NuxtLink
                 to="/"
                 :title="title"
-                aria-label="home"
-                class="flex items-center space-x-2"
+                aria-label="ZAAC home"
+                class="flex items-center"
               >
-                <span
+                <img
+                  :src="logoUrl"
+                  alt=""
+                  width="96"
+                  height="96"
                   class="
-                    flex size-8 items-center justify-center rounded-full
-                    bg-primary text-xs font-black text-primary-foreground
+                    h-10 w-auto shrink-0 rounded-md object-contain
+                    sm:h-12
                   "
                 >
-                  Z
-                </span>
-                <span class="text-xl font-black">{{ title }}</span>
               </NuxtLink>
 
               <button
@@ -94,13 +96,13 @@ const { title } = useAppConfig()
                   variant="outline"
                   size="sm"
                 >
-                  <a href="#programs">Programs</a>
+                  <a href="#programs">{{ $t('layouts.header.programs') }}</a>
                 </Button>
                 <Button
                   as-child
                   size="sm"
                 >
-                  <a href="#contact">Contact</a>
+                  <a href="#contact">{{ $t('layouts.header.contact') }}</a>
                 </Button>
 
                 <SwitchLanguage />
@@ -117,55 +119,30 @@ const { title } = useAppConfig()
       <slot />
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t bg-background py-8">
-      <div class="mx-auto max-w-6xl px-6">
-        <div
-          class="
-            flex flex-col items-center gap-6 pt-2
-            md:flex-row md:justify-between
-          "
+    <footer class="site-footer">
+      <div class="footer-row">
+        <NuxtLink
+          to="/"
+          :title="title"
+          aria-label="home"
+          class="footer-logo"
         >
-          <div
-            class="
-              flex flex-col items-center gap-4
-              md:flex-row md:gap-6
-            "
-          >
-            <NuxtLink
-              to="/"
-              :title="title"
-              aria-label="home"
-              class="block size-fit"
-            >
-              <div class="flex items-center space-x-2">
-                <span
-                  class="
-                    flex size-8 items-center justify-center rounded-full
-                    bg-primary text-xs font-black text-primary-foreground
-                  "
-                >
-                  Z
-                </span>
-                <span class="text-xl font-black">{{ title }}</span>
-              </div>
+          {{ title }}
+        </NuxtLink>
+
+        <nav class="footer-links" aria-label="Footer">
+          <a href="#programs">{{ $t('layouts.header.programs') }}</a>
+          <a href="#contact">{{ $t('layouts.header.contact') }}</a>
+          <span>{{ $t('layouts.footer.location') }}</span>
+        </nav>
+
+        <div class="footer-credit">
+          <span>
+            {{ $t('layouts.footer.created_by') }}
+            <NuxtLink to="/">
+              {{ $t('layouts.footer.creator') }}
             </NuxtLink>
-
-            <small class="block text-center text-sm text-muted-foreground">
-              &copy; {{ new Date().getFullYear() }}
-              Zahoor Afkaar Academic Center
-            </small>
-          </div>
-
-          <div
-            class="
-              flex items-center justify-center gap-2 text-sm
-              text-muted-foreground
-            "
-          >
-            <MapPin class="size-4" />
-            <span>Kabul, Afghanistan</span>
-          </div>
+          </span>
         </div>
       </div>
     </footer>

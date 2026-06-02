@@ -52,22 +52,11 @@ const typedTestimonials = testimonials as Testimonial[]
                 hover:shadow-md
               "
             >
-              <CardContent class="grid grid-cols-[auto_1fr] gap-3 px-4 py-0">
-                <Avatar class="size-9">
-                  <AvatarImage
-                    v-if="testimonial.username"
-                    :alt="testimonial.name"
-                    :src="`https://unavatar.webp.se/x/${testimonial.username}`"
-                    loading="lazy"
-                    referrerpolicy="no-referrer"
-                  />
-                  <AvatarFallback>{{ testimonial.name.slice(0, 2) }}</AvatarFallback>
-                </Avatar>
-
+              <CardContent class="px-4 py-0">
                 <div>
                   <div class="flex items-center gap-1">
                     <h3 class="font-medium">
-                      {{ testimonial.name }}
+                      {{ $t(`home.testimonials.items.${testimonial.id}.name`) }}
                     </h3>
                     <svg
                       v-if="testimonial.verified"
@@ -88,7 +77,7 @@ const typedTestimonials = testimonials as Testimonial[]
 
                   <blockquote class="mt-3">
                     <p class="text-foreground">
-                      {{ testimonial.content }}
+                      {{ $t(`home.testimonials.items.${testimonial.id}.content`) }}
                     </p>
                   </blockquote>
                 </div>

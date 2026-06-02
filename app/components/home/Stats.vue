@@ -4,11 +4,11 @@ import NumberFlow from '@number-flow/vue'
 const stats = [
   {
     value: 8,
-    label: 'Core classes',
+    labelKey: 'home.stats.core_classes',
   },
   {
     value: 3,
-    label: 'Program areas',
+    labelKey: 'home.stats.program_areas',
   },
 ] as const
 </script>
@@ -45,7 +45,7 @@ const stats = [
       >
         <div
           v-for="item in stats"
-          :key="item.label"
+          :key="item.labelKey"
           class="
             space-y-4 pb-6 text-center
             md:pb-0
@@ -58,7 +58,7 @@ const stats = [
             <NumberFlow class="text-5xl font-bold tabular-nums" :value="item.value" />
           </ClientOnly>
           <p class="text-muted-foreground">
-            {{ item.label }}
+            {{ $t(item.labelKey) }}
           </p>
         </div>
       </div>

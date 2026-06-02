@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const cards = [
+  'local',
+  'simple',
+  'supportive',
+] as const
+</script>
+
 <template>
   <section class="bg-background py-12">
     <div class="mx-auto max-w-6xl px-6">
@@ -7,28 +15,16 @@
           md:grid-cols-3
         "
       >
-        <div class="rounded-xl border p-5">
+        <div
+          v-for="card in cards"
+          :key="card"
+          class="rounded-xl border p-5"
+        >
           <p class="text-sm font-medium">
-            Kabul Based
+            {{ $t(`home.logos.items.${card}.title`) }}
           </p>
           <p class="mt-2 text-sm text-muted-foreground">
-            Serving students locally in Kabul, Afghanistan.
-          </p>
-        </div>
-        <div class="rounded-xl border p-5">
-          <p class="text-sm font-medium">
-            Simple Classes
-          </p>
-          <p class="mt-2 text-sm text-muted-foreground">
-            Clear lessons in English, science, math, and computers.
-          </p>
-        </div>
-        <div class="rounded-xl border p-5">
-          <p class="text-sm font-medium">
-            Supportive Teachers
-          </p>
-          <p class="mt-2 text-sm text-muted-foreground">
-            Patient instruction for school students and young learners.
+            {{ $t(`home.logos.items.${card}.description`) }}
           </p>
         </div>
       </div>

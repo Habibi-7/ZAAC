@@ -33,7 +33,7 @@
                 text-muted-foreground
               "
             >
-              Kabul, Afghanistan
+              {{ $t('home.cta.location') }}
             </div>
           </div>
         </div>

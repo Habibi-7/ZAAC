@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next'
 
-const { title, description } = useAppConfig()
 const heroUrl = '/images/hero.svg'
 </script>
 
@@ -54,10 +53,10 @@ const heroUrl = '/images/hero.svg'
               xl:text-6xl
             "
           >
-            {{ title }}
+            {{ $t('home.hero.title') }}
           </h1>
           <p class="mt-6 text-lg text-pretty text-muted-foreground">
-            {{ description }}
+            {{ $t('home.hero.description') }}
           </p>
 
           <div
