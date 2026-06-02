@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Menu, X } from 'lucide-vue-next'
+import { Mail, MapPin, Menu, Phone, X } from 'lucide-vue-next'
 import logoUrl from '@/assets/images/logo.jpeg'
 
 const showMenu = ref(false)
@@ -120,24 +120,43 @@ const { title } = useAppConfig()
     </main>
 
     <footer class="site-footer">
-      <div class="footer-row">
-        <NuxtLink
-          to="/"
-          :title="title"
-          aria-label="home"
-          class="footer-logo"
-        >
-          {{ title }}
-        </NuxtLink>
+      <div class="footer-inner">
+        <div class="footer-connect">
+          <span class="footer-connect__label">{{ $t('layouts.footer.follow_us') }}</span>
+          <ContactLinks />
+        </div>
 
-        <nav class="footer-links" aria-label="Footer">
-          <a href="#programs">{{ $t('layouts.header.programs') }}</a>
-          <a href="#contact">{{ $t('layouts.header.contact') }}</a>
-          <span>{{ $t('layouts.footer.location') }}</span>
-        </nav>
+        <div class="footer-reach">
+          <a
+            href="tel:+93765304418"
+            class="footer-reach__item"
+            aria-label="Call ZAAC"
+          >
+            <Phone aria-hidden="true" class="size-4" />
+            <span>+93 765 30 4418</span>
+          </a>
+          <a
+            href="mailto:zaac.main@gmail.com"
+            class="footer-reach__item"
+            aria-label="Email ZAAC"
+          >
+            <Mail aria-hidden="true" class="size-4" />
+            <span>zaac.main@gmail.com</span>
+          </a>
+          <a
+            href="https://maps.app.goo.gl/k5N3P5SDXZ4ZHzSY6"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-reach__item"
+            aria-label="View ZAAC on Google Maps"
+          >
+            <MapPin aria-hidden="true" class="size-4" />
+            <span>Golden Town, 1st Street, Kabul</span>
+          </a>
+        </div>
 
-        <div class="footer-credit">
-          <span>
+        <div class="footer-row">
+          <span class="footer-credit">
             {{ $t('layouts.footer.created_by') }}
             <NuxtLink to="/">
               {{ $t('layouts.footer.creator') }}

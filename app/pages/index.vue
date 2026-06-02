@@ -3,6 +3,7 @@
     <HomeHero />
     <HomeLogos />
     <HomeFeatures />
+    <HomeOnline />
     <HomeStats />
     <HomeImageSlider />
     <HomeTestimonials />

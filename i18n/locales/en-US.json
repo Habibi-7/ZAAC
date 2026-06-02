@@ -40,6 +40,7 @@
       "location": "Kabul, Afghanistan",
       "created_by": "Created by",
       "creator": "Zahoor Afkaar Academic Center",
+      "follow_us": "Follow us",
       "social": {
         "email": "Email",
         "telegram": "Telegram",
@@ -177,6 +178,39 @@
       "description": "Visit Zahoor Afkaar Academic Center in Kabul to learn more about class schedules and registration.",
       "button": "View Classes",
       "location": "Kabul, Afghanistan"
+    },
+    "online": {
+      "eyebrow": "Online",
+      "title": "Online Classes",
+      "subtitle": "Study from anywhere with the same teachers and the same supportive style as our Kabul classroom.",
+      "features": {
+        "live": {
+          "title": "Live sessions",
+          "description": "Interactive lessons over Zoom or Google Meet."
+        },
+        "recorded": {
+          "title": "Recorded lessons",
+          "description": "Miss a class? Recordings are shared with every student."
+        },
+        "flexible": {
+          "title": "Flexible schedule",
+          "description": "Morning, afternoon, or evening — pick what fits your week."
+        },
+        "anywhere": {
+          "title": "From anywhere",
+          "description": "Join from Kabul, anywhere in Afghanistan, or abroad."
+        }
+      },
+      "cta": {
+        "title": "Ready to start?",
+        "description": "Email us and we'll reply with class times, fees, and how to join your first session.",
+        "button": "Sign Up via Email",
+        "hint": "Opens your email app with a sign-up template ready to send."
+      },
+      "email": {
+        "subject": "Online Class Sign-up — ZAAC",
+        "body": "Hello ZAAC,\n\nI would like to sign up for online classes at Zahoor Afkaar Academic Center.\n\nName:\nPhone / WhatsApp:\nEmail:\nClass(es) of interest:\nPreferred schedule (morning / afternoon / evening / flexible):\nNotes:\n\nThank you,"
+      }
     },
     "logos": {
       "title": "Built for focused learning",
