@@ -18,7 +18,7 @@ const cards = [
         <div
           v-for="card in cards"
           :key="card"
-          class="rounded-xl border p-5"
+          class="zaac-trust-card rounded-xl border p-5"
         >
           <p class="text-sm font-medium">
             {{ $t(`home.logos.items.${card}.title`) }}

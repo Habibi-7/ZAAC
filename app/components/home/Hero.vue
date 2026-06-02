@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { ArrowRight } from 'lucide-vue-next'
 
+const { locale, localeProperties } = useI18n()
 const heroUrl = '/images/hero.svg'
+const isRtl = computed(() => localeProperties.value.dir === 'rtl')
 </script>
 
 <template>
@@ -19,21 +21,22 @@ const heroUrl = '/images/hero.svg'
         "
       >
         <div
-          class="
-            max-w-lg text-center
-            lg:text-left
-          "
+          :lang="locale"
+          :dir="isRtl ? 'rtl' : 'ltr'"
+          class="max-w-lg text-center"
+          :class="isRtl ? 'lg:text-right' : 'lg:text-left'"
         >
           <a
             href="#programs"
             :title="$t('home.hero.badge')"
             class="
-              mx-auto mb-8 inline-flex w-fit items-center gap-2 rounded-full
-              border p-1 pr-3
-              lg:mx-0
+              zaac-hero-badge mx-auto mb-8 inline-flex w-fit items-center gap-2
+              rounded-full border p-1 pr-3
             "
+            :class="isRtl ? 'lg:mr-0 lg:ml-auto' : 'lg:mr-auto lg:ml-0'"
           >
             <span
+              data-zaac-badge-mark
               class="
                 flex items-center gap-1.5 rounded-full bg-muted px-2 py-1
                 text-xs
@@ -63,8 +66,8 @@ const heroUrl = '/images/hero.svg'
             class="
               mt-10 flex flex-col items-center justify-center gap-2
               sm:flex-row
-              lg:justify-start
             "
+            :class="isRtl ? 'lg:justify-end' : 'lg:justify-start'"
           >
             <Button
               as-child

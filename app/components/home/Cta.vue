@@ -29,8 +29,8 @@
 
             <div
               class="
-                inline-flex items-center rounded-md border px-4 py-2 text-sm
-                text-muted-foreground
+                zaac-location-chip inline-flex items-center rounded-md border
+                px-4 py-2 text-sm text-muted-foreground
               "
             >
               {{ $t('home.cta.location') }}

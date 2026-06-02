@@ -55,7 +55,7 @@ const stats = [
             <template #fallback>
               <Skeleton class="mx-auto h-12 w-24" />
             </template>
-            <NumberFlow class="text-5xl font-bold tabular-nums" :value="item.value" />
+            <NumberFlow class="zaac-stat-number text-5xl font-bold tabular-nums" :value="item.value" />
           </ClientOnly>
           <p class="text-muted-foreground">
             {{ $t(item.labelKey) }}

@@ -33,8 +33,8 @@ const typedTestimonials = testimonials as Testimonial[]
         </div>
         <div
           class="
-            mt-8 columns-1 gap-3 space-y-3
-            md:mt-12 md:columns-3
+            mt-8 grid gap-3
+            md:mt-12 md:grid-cols-3
           "
         >
           <component
@@ -44,7 +44,7 @@ const typedTestimonials = testimonials as Testimonial[]
             :href="testimonial.url || undefined"
             :target="testimonial.url ? '_blank' : undefined"
             :rel="testimonial.url ? 'noopener noreferrer' : undefined"
-            class="block break-inside-avoid"
+            class="block"
           >
             <Card
               class="
@@ -55,7 +55,7 @@ const typedTestimonials = testimonials as Testimonial[]
               <CardContent class="px-4 py-0">
                 <div>
                   <div class="flex items-center gap-1">
-                    <h3 class="font-medium">
+                    <h3 class="zaac-testimonial-name font-medium">
                       {{ $t(`home.testimonials.items.${testimonial.id}.name`) }}
                     </h3>
                     <svg

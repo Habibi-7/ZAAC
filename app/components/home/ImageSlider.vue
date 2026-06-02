@@ -42,7 +42,7 @@ const loopedSlides = [...slides, ...slides]
       </div>
     </div>
 
-    <div data-zaac-image-slider class="mt-10">
+    <div data-zaac-image-slider dir="ltr" class="mt-10">
       <div data-zaac-image-track class="flex w-max gap-4 px-6">
         <figure
           v-for="(slide, index) in loopedSlides"
@@ -84,11 +84,15 @@ const loopedSlides = [...slides, ...slides]
   height: 16px;
   margin: 1.5rem 0 0;
   margin-left: calc(50% - 50vw);
-  background-image: radial-gradient(circle, color-mix(in srgb, currentColor 34%, transparent) 0.9px, transparent 1.5px);
+  background-image: radial-gradient(circle, oklch(0.58 0.12 225 / 54%) 0.9px, transparent 1.5px);
   background-repeat: repeat;
   background-size: 8px 6px;
   opacity: 0.72;
   pointer-events: none;
+}
+
+:global(.dark) [data-zaac-slider-dots] {
+  background-image: radial-gradient(circle, oklch(0.72 0.1 225 / 64%) 0.9px, transparent 1.5px);
 }
 
 @keyframes zaac-image-marquee {
