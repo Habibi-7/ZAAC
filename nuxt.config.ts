@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/motion/nuxt',
     'shadcn-nuxt',
+    '@vercel/analytics',
   ],
   devtools: { enabled: true },
   css: ['@/assets/css/tailwind.css'],

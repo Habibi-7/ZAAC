@@ -41,6 +41,7 @@
     "@types/node": "^25.2.0",
     "@unovis/ts": "^1.6.4",
     "@unovis/vue": "^1.6.4",
+    "@vercel/analytics": "^2.0.1",
     "@vueuse/core": "^14.2.0",
     "@vueuse/integrations": "^14.2.0",
     "@vueuse/motion": "^3.0.3",
