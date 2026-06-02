@@ -130,7 +130,7 @@
     @apply bg-background text-foreground;
   }
 
-  :where(:lang(fa), :lang(ps), [dir='rtl']) {
+  :where(:lang(fa)) {
     font-family: 'Baghdad ZAAC', ui-sans-serif, system-ui, sans-serif;
   }
 
@@ -210,7 +210,7 @@
     content: '';
     position: absolute;
     top: 1.25rem;
-    right: 1.25rem;
+    inset-inline-end: 1.25rem;
     width: 0.45rem;
     height: 0.45rem;
     border-radius: 999px;
