@@ -24,7 +24,7 @@ node_modules
 site
 cache
 public/world.json
-public/WhatsApp Image *.jpeg
+
 .dev.*
 .kiro/steering/locale.md
 
