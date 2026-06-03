@@ -29,6 +29,7 @@ export default withNuxt(antfu(
     },
     rules: {
       ...eslintPluginBetterTailwindcss.configs['recommended-warn'].rules,
+      'better-tailwindcss/no-unregistered-classes': 'off',
     },
   },
 ))

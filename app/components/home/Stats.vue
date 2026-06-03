@@ -53,7 +53,7 @@ const stats = [
         >
           <ClientOnly>
             <template #fallback>
-              <Skeleton class="mx-auto h-12 w-24" />
+              <span class="mx-auto block h-12 w-24 rounded-md bg-muted" />
             </template>
             <NumberFlow class="zaac-stat-number text-5xl font-bold tabular-nums" :value="item.value" />
           </ClientOnly>

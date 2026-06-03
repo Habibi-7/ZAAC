@@ -1,8 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-@source "../../../layers";
-
 @font-face {
   font-family: 'Baghdad ZAAC';
   src: url('/Baghdad.ttc');

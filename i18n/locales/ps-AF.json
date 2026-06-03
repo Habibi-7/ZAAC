@@ -2,16 +2,7 @@
   "common": {
     "i18n": "څو ژبې",
     "abbreviations": "پښتو",
-    "current_language": "پښتو",
-    "try_again": "بیا هڅه وکړئ",
-    "cancel": "لغوه",
-    "continue": "دوام ورکړئ",
-    "close": "بندول",
-    "save": "خوندي کول",
-    "edit": "سمول",
-    "delete": "ړنګول",
-    "delete_success": "په بریالیتوب ړنګ شو!",
-    "search": "لټون"
+    "current_language": "پښتو"
   },
   "theme": {
     "toggle": "د رنګ حالت بدلول",
@@ -21,8 +12,6 @@
   },
   "layouts": {
     "footer": {
-      "copyright": "د ظهور افکار علمي ښوونیز مرکز",
-      "location": "کابل، افغانستان",
       "created_by": "جوړ شوی د",
       "creator": "د ظهور افکار علمي ښوونیز مرکز",
       "follow_us": "موږ تعقیب کړئ"
@@ -151,8 +140,6 @@
     "stats": {
       "title": "په ZAAC کې زده کړه",
       "subtitle": "د انګلیسي، علومو او کمپیوټر مهارتونو لپاره ساده پروګرامونه",
-      "stars": "اصلي صنفونه",
-      "forks": "د پروګرام برخې",
       "core_classes": "اصلي صنفونه",
       "program_areas": "د پروګرام برخې"
     },

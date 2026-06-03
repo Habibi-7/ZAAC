@@ -1,44 +1,26 @@
 [
   {
     "id": "zaac-001",
-    "name": "Ahmad, Grade 11",
-    "content": "ZAAC helped me become more confident in English. The teachers explain slowly, give examples, and make every student feel comfortable asking questions.",
-    "verified": false,
-    "date": "2026-01-10"
+    "content": "ZAAC helped me become more confident in English. The teachers explain slowly, give examples, and make every student feel comfortable asking questions."
   },
   {
     "id": "zaac-002",
-    "name": "Fatima, Kabul",
-    "content": "I joined for mathematics and physics, and the classes made difficult topics much easier. The lessons are clear and the environment is respectful.",
-    "verified": false,
-    "date": "2026-01-18"
+    "content": "I joined for mathematics and physics, and the classes made difficult topics much easier. The lessons are clear and the environment is respectful."
   },
   {
     "id": "zaac-003",
-    "name": "Maryam, English Student",
-    "content": "My speaking improved a lot after studying at Zahoor Afkaar Academic Center. I like that the classes are simple, organized, and practical.",
-    "verified": false,
-    "date": "2026-02-02"
+    "content": "My speaking improved a lot after studying at Zahoor Afkaar Academic Center. I like that the classes are simple, organized, and practical."
   },
   {
     "id": "zaac-004",
-    "name": "Omid, Computer Class",
-    "content": "The computer classes helped me learn useful skills step by step. The teachers are patient and explain things in a way students can understand.",
-    "verified": false,
-    "date": "2026-02-12"
+    "content": "The computer classes helped me learn useful skills step by step. The teachers are patient and explain things in a way students can understand."
   },
   {
     "id": "zaac-005",
-    "name": "Zahra, Science Student",
-    "content": "ZAAC is a good place for students who want to improve in school subjects. Chemistry and biology became much clearer for me here.",
-    "verified": false,
-    "date": "2026-03-01"
+    "content": "ZAAC is a good place for students who want to improve in school subjects. Chemistry and biology became much clearer for me here."
   },
   {
     "id": "zaac-006",
-    "name": "Haroon, Kabul",
-    "content": "The center has a calm learning environment. I feel motivated to study English, science, and computer skills for my future.",
-    "verified": false,
-    "date": "2026-03-16"
+    "content": "The center has a calm learning environment. I feel motivated to study English, science, and computer skills for my future."
   }
 ]

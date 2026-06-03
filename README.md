@@ -1,6 +1,6 @@
-# Sink UI
+# ZAAC Website
 
-This repository keeps the Sink Nuxt interface intact and removes the Cloudflare/Nitro backend. Dashboard API calls are served by a local mock adapter in `app/utils/mock-api.ts`, so the pages remain interactive without external services.
+Static public website for Zahoor Afkaar Academic Center in Kabul, Afghanistan.
 
 ## Stack
 
@@ -8,7 +8,6 @@ This repository keeps the Sink Nuxt interface intact and removes the Cloudflare/
 - Vue 3
 - Tailwind CSS 4
 - shadcn-vue components
-- Pinia
 - Nuxt i18n
 
 ## Commands
@@ -26,10 +25,7 @@ The dev server runs on port `7465`.
 
 ## Structure
 
-- `app/` contains the main Nuxt app, landing page, shared UI components, assets, composables, and utilities.
-- `layers/dashboard/` contains the dashboard UI layer.
-- `shared/` contains schemas, utilities, and types still used by the UI.
+- `app/` contains the Nuxt app, homepage sections, layout, UI components, assets, and shared helpers.
 - `i18n/` contains locales and i18n configuration.
-- `scripts/` generates static UI assets such as map, globe, and testimonial data.
 
-There is no server implementation in this version. The `/api/**` strings still appear in components as UI-facing route keys, but `useAPI()` resolves them locally through the mock adapter.
+The site has no backend, no auth, no database, and no API routes. Online class sign-up uses a `mailto:` link that opens the visitor's email client with a prepared draft.

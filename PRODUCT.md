@@ -18,7 +18,7 @@ Simple, respectful, focused. The site should feel calm and academic without beco
 
 ## Anti-references
 
-Do not make the site feel like a SaaS product, link shortener, startup dashboard, or flashy education platform. Avoid hype, heavy gradients, generic AI-looking sections, and busy marketing copy.
+Do not make the site feel like a SaaS product, startup tool, or flashy education platform. Avoid hype, heavy gradients, generic AI-looking sections, and busy marketing copy.
 
 ## Design Principles
 

@@ -1,27 +1,27 @@
 <script setup lang="ts">
 const slides = [
   {
-    src: '/WhatsApp%20Image%202026-05-26%20at%2012.00.16.jpeg',
+    src: '/images/classroom/certificate.jpeg',
     altKey: 'certificate',
   },
   {
-    src: '/WhatsApp%20Image%202026-05-26%20at%2012.00.21.jpeg',
+    src: '/images/classroom/ceremony.jpeg',
     altKey: 'ceremony',
   },
   {
-    src: '/WhatsApp%20Image%202026-05-26%20at%2012.00.24.jpeg',
+    src: '/images/classroom/computer.jpeg',
     altKey: 'computer',
   },
   {
-    src: '/WhatsApp%20Image%202026-05-26%20at%2012.00.26.jpeg',
+    src: '/images/classroom/graduation.jpeg',
     altKey: 'graduation',
   },
   {
-    src: '/WhatsApp%20Image%202026-05-26%20at%2012.00.28.jpeg',
+    src: '/images/classroom/female-students.jpeg',
     altKey: 'female_students',
   },
   {
-    src: '/WhatsApp%20Image%202026-05-26%20at%2012.00.30.jpeg',
+    src: '/images/classroom/speaker.jpeg',
     altKey: 'speaker',
   },
 ] as const

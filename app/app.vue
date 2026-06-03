@@ -1,21 +1,18 @@
 <script setup lang="ts">
-import 'vue-sonner/style.css'
-
-const { title, description, image } = useAppConfig()
+const { title, description } = useAppConfig()
 const route = useRoute()
 const localeHead = useLocaleHead()
+const siteUrl = 'https://zahoorafkaar.com'
 
 useSeoMeta({
-  title: `${title} - Link Shortener with Analytics`,
+  title: `${title} - Academic Center in Kabul`,
   description,
   ogType: 'website',
   ogTitle: title,
   ogSiteName: title,
   ogDescription: description,
-  ogImage: image,
   twitterTitle: title,
   twitterDescription: description,
-  twitterImage: image,
   twitterCard: 'summary_large_image',
 })
 
@@ -24,22 +21,13 @@ useHead(() => ({
   meta: [
     {
       name: 'viewport',
-      content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
+      content: 'width=device-width, initial-scale=1',
     },
   ],
   link: [
     {
       rel: 'canonical',
-      href: computed(() => `https://sink.cool${route.path}`),
-    },
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: '/icon-192.png',
-    },
-    {
-      rel: 'apple-touch-icon',
-      href: '/apple-touch-icon.png',
+      href: computed(() => `${siteUrl}${route.path}`),
     },
   ],
 }))
@@ -49,6 +37,5 @@ useHead(() => ({
   <NuxtLayout>
     <NuxtLoadingIndicator color="#000" />
     <NuxtPage />
-    <Toaster position="top-center" rich-colors />
   </NuxtLayout>
 </template>

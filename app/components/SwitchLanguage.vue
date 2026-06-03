@@ -5,28 +5,36 @@ const { setLocale, locales } = useI18n()
 </script>
 
 <template>
-  <DropdownMenu>
-    <DropdownMenuTrigger as-child>
-      <Button variant="ghost">
+  <ClientOnly>
+    <template #fallback>
+      <Button variant="ghost" disabled aria-label="Select Language">
         <Languages class="h-5 w-5" />
-        <span class="sr-only">{{ $t('layouts.header.select_language') }}</span>
       </Button>
-    </DropdownMenuTrigger>
-    <DropdownMenuContent
-      align="end"
-      class="min-w-min"
-    >
-      <DropdownMenuItem
-        v-for="locale in locales"
-        :key="locale.code"
-        class="cursor-pointer"
-        @click="setLocale(locale.code)"
+    </template>
+
+    <DropdownMenu>
+      <DropdownMenuTrigger as-child>
+        <Button variant="ghost">
+          <Languages class="h-5 w-5" />
+          <span class="sr-only">{{ $t('layouts.header.select_language') }}</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="end"
+        class="min-w-min"
       >
-        <span class="mr-1">
-          {{ locale.emoji }}
-        </span>
-        {{ locale.name }}
-      </DropdownMenuItem>
-    </DropdownMenuContent>
-  </DropdownMenu>
+        <DropdownMenuItem
+          v-for="locale in locales"
+          :key="locale.code"
+          class="cursor-pointer"
+          @click="setLocale(locale.code)"
+        >
+          <span class="mr-1">
+            {{ locale.emoji }}
+          </span>
+          {{ locale.name }}
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  </ClientOnly>
 </template>

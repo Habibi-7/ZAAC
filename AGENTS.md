@@ -1,10 +1,10 @@
 # Repository Guidelines
 
-Guidelines for agentic coding agents operating in this UI-only Sink codebase.
-
 ## Project Overview
 
-This repo preserves the Sink Nuxt interface and removes the Cloudflare/Nitro backend. Dashboard API calls are mocked locally through `app/utils/mock-api.ts`.
+This repo contains the public Nuxt website for Zahoor Afkaar Academic Center (ZAAC) in Kabul, Afghanistan.
+
+The site is static and intentionally simple: no backend, no auth, no database, and no API routes. Online class sign-up uses a `mailto:` link to `zaac.main@gmail.com`.
 
 All documentation and comments must be in English.
 
@@ -13,16 +13,12 @@ All documentation and comments must be in English.
 ```txt
 app/                    # Nuxt 4 application layer
   components/           # Vue components, PascalCase
-    ui/                 # shadcn-vue components; do not edit generated files
-  composables/          # Vue composables, camelCase use* prefix
+    home/               # Homepage sections
+    ui/                 # shadcn-vue primitives used by the public site
   pages/                # File-based routing
-  types/                # Type re-exports from shared/
-  utils/                # UI utilities and mock API adapter
   lib/                  # Shared helpers
-layers/dashboard/       # Dashboard UI layer
-shared/                 # UI-facing schemas, types, and utilities
 i18n/                   # Locale files and i18n config
-scripts/                # Static UI asset generation
+public/                 # Static images, fonts, icons, and robots.txt
 ```
 
 ## Commands
@@ -37,7 +33,7 @@ pnpm lint:fix     # ESLint with auto-fix
 pnpm types:check  # TypeScript type check
 ```
 
-`pnpm install` runs `postinstall`, which executes `build:map && nuxt prepare`.
+`pnpm install` runs `postinstall`, which executes `nuxt prepare`.
 
 ## Code Style
 
@@ -54,21 +50,14 @@ Use `<script setup lang="ts">` for Vue components. Component files should be Pas
 
 ## UI Components
 
-- Use shadcn-vue from `app/components/ui/`.
-- Do not edit generated shadcn-vue files unless the task explicitly requires it.
-- Use `ResponsiveModal` for mobile-optimized dialogs.
+- Use the existing shadcn-vue primitives in `app/components/ui/`.
+- Do not add broad generated component sets unless the page actually needs them.
 - Use Tailwind CSS v4 utilities.
 - Use static English for `aria-label`.
 - Use icons from `lucide-vue-next`.
 
-## Mock API
-
-`app/utils/api.ts` routes all dashboard requests to `app/utils/mock-api.ts`.
-
-When a screen needs data, add or adjust mock responses there instead of reintroducing server routes. Keep mock data deterministic enough that the UI remains easy to review.
-
 ## Architecture Notes
 
-- The dashboard layer is client-side only (`ssr: false`).
-- The root app remains a Nuxt app with i18n and static asset generation.
-- The repo intentionally has no Nitro API routes, Cloudflare bindings, Worker config, or API tests.
+- Keep the site focused on the public ZAAC homepage and contact flow.
+- Do not reintroduce old fork code, server code, analytics consoles, or local API shims.
+- Keep new content available in English, Dari (`fa-AF`), and Pashto (`ps-AF`) when user-facing.

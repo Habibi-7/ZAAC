@@ -3,13 +3,10 @@ import { currentLocales } from './i18n/i18n'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['./layers/dashboard'],
   modules: [
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
-    '@pinia/nuxt',
-    '@vueuse/motion/nuxt',
     'shadcn-nuxt',
   ],
   devtools: { enabled: true },
@@ -17,24 +14,11 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
-  runtimeConfig: {
-    public: {
-      previewMode: '',
-      slugDefaultLength: '6',
-      kvBatchLimit: '50',
-    },
-  },
   routeRules: {
     '/': {
       prerender: true,
     },
-    '/sphere.bin': {
-      headers: { 'Cache-Control': 'public, max-age=2592000, immutable' },
-    },
     '/*.json': {
-      headers: { 'Cache-Control': 'public, max-age=2592000, immutable' },
-    },
-    '/*.geojson': {
       headers: { 'Cache-Control': 'public, max-age=2592000, immutable' },
     },
   },
@@ -48,7 +32,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  compatibilityDate: 'latest',
+  compatibilityDate: '2026-06-03',
   nitro: {
     preset: 'static',
   },
@@ -74,7 +58,7 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     detectBrowserLanguage: {
       useCookie: true,
-      cookieKey: 'sink_i18n_redirected',
+      cookieKey: 'zaac_i18n_redirected',
       redirectOn: 'root',
     },
     baseUrl: '/',

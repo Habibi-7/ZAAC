@@ -2,16 +2,7 @@
   "common": {
     "i18n": "چند زبانه",
     "abbreviations": "فا",
-    "current_language": "فارسی",
-    "try_again": "دوباره کوشش کنید",
-    "cancel": "لغو",
-    "continue": "ادامه",
-    "close": "بستن",
-    "save": "ذخیره",
-    "edit": "ویرایش",
-    "delete": "حذف",
-    "delete_success": "با موفقیت حذف شد!",
-    "search": "جستجو"
+    "current_language": "فارسی"
   },
   "theme": {
     "toggle": "تغییر حالت رنگ",
@@ -21,8 +12,6 @@
   },
   "layouts": {
     "footer": {
-      "copyright": "آموزشگاه علمی ظهور افکار",
-      "location": "کابل، افغانستان",
       "created_by": "ساخته شده توسط",
       "creator": "آموزشگاه علمی ظهور افکار",
       "follow_us": "ما را دنبال کنید"
@@ -151,8 +140,6 @@
     "stats": {
       "title": "آموزش در ZAAC",
       "subtitle": "برنامه‌های ساده برای انگلیسی، علوم و مهارت‌های کمپیوتر",
-      "stars": "صنف‌های اصلی",
-      "forks": "بخش‌های برنامه",
       "core_classes": "صنف‌های اصلی",
       "program_areas": "بخش‌های برنامه"
     },
