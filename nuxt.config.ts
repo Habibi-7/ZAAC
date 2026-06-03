@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@nuxtjs/i18n',
     '@nuxt/eslint',
+    '@vercel/analytics',
     'shadcn-nuxt',
   ],
   devtools: { enabled: true },
