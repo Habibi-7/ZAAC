@@ -27,3 +27,7 @@ pnpm lint
 - `app/assets/css/tailwind.css` - global tokens and section styles.
 - `i18n/locales/` - English, Dari, and Pashto copy.
 - `public/images/` - static site imagery.
+
+## Credits
+
+This project began as a fork of [Sink](https://github.com/miantiao-me/Sink). It has since been adapted into a static website for ZAAC.
